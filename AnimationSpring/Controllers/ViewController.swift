@@ -12,8 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var springAnimationView: SpringView!
     
-    @IBOutlet var button: SpringButton!
-    
     @IBOutlet var firstLabel: UILabel!
     @IBOutlet var secondLabel: UILabel!
     @IBOutlet var thirdLabel: UILabel!
@@ -21,7 +19,7 @@ class ViewController: UIViewController {
     var springAnimationCases = Animation.getAnimationType()
     
     private var count = 0
-
+    
     @IBAction func startSpringAnimationButton(_ sender: SpringButton) {
         
         let animationType = springAnimationCases[count]
@@ -38,9 +36,9 @@ class ViewController: UIViewController {
         thirdLabel.text = "Force: \(animationType.force)"
         
         springAnimationView.animate()
-      
+        
         if springAnimationView.animation.count > count {
-           count += 1
+            count += 1
         } else {
             count -= springAnimationView.animation.count
         }
