@@ -12,9 +12,9 @@ class ViewController: UIViewController {
     
     @IBOutlet var springAnimationView: SpringView!
     
-    @IBOutlet var firstLabel: UILabel!
-    @IBOutlet var secondLabel: UILabel!
-    @IBOutlet var thirdLabel: UILabel!
+    @IBOutlet var firstLabelInView: UILabel!
+    @IBOutlet var secondLabelInView: UILabel!
+    @IBOutlet var thirdLabelInView: UILabel!
     
     var springAnimationCases = Animation.getAnimationType()
     
@@ -31,9 +31,9 @@ class ViewController: UIViewController {
         springAnimationView.force = animationType.force
         springAnimationView.duration = animationType.duration
         
-        firstLabel.text = "Preset: \(animationType.preset)"
-        secondLabel.text = "Curve: \(animationType.curve)"
-        thirdLabel.text = "Force: \(animationType.force)"
+        firstLabelInView.text = "Preset: \(animationType.preset)"
+        secondLabelInView.text = "Curve: \(animationType.curve)"
+        thirdLabelInView.text = "Force: \(animationType.force)"
         
         springAnimationView.animate()
         
