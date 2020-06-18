@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		178B28D107E1D21AAC137BAC /* Pods_AnimationSpring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A6BE1ED9F39FCD198325FE9 /* Pods_AnimationSpring.framework */; };
+		56350424249B606D00869972 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56350423249B606D00869972 /* DataManager.swift */; };
 		568A49742499D40A00AFFEF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A49732499D40A00AFFEF1 /* AppDelegate.swift */; };
 		568A49762499D40A00AFFEF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A49752499D40A00AFFEF1 /* SceneDelegate.swift */; };
 		568A49782499D40A00AFFEF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568A49772499D40A00AFFEF1 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		3A6BE1ED9F39FCD198325FE9 /* Pods_AnimationSpring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationSpring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B1181EEFAABAD213EC88D1 /* Pods-AnimationSpring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationSpring.release.xcconfig"; path = "Target Support Files/Pods-AnimationSpring/Pods-AnimationSpring.release.xcconfig"; sourceTree = "<group>"; };
+		56350423249B606D00869972 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		568A49702499D40A00AFFEF1 /* AnimationSpring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationSpring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		568A49732499D40A00AFFEF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		568A49752499D40A00AFFEF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		568A498D2499D6E900AFFEF1 /* DataManagers */ = {
 			isa = PBXGroup;
 			children = (
+				56350423249B606D00869972 /* DataManager.swift */,
 			);
 			path = DataManagers;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				568A49782499D40A00AFFEF1 /* ViewController.swift in Sources */,
+				56350424249B606D00869972 /* DataManager.swift in Sources */,
 				568A49742499D40A00AFFEF1 /* AppDelegate.swift in Sources */,
 				568A498F2499DC6A00AFFEF1 /* Animation.swift in Sources */,
 				568A49762499D40A00AFFEF1 /* SceneDelegate.swift in Sources */,

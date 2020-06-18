@@ -15,77 +15,22 @@ struct Animation {
     let duration: CGFloat
    
 }
+
 extension Animation {
     
 static func getAnimationType() -> [Animation] {
     
     var springAnimations: [Animation] = []
     
-    let animationPresets: [Spring.AnimationPreset] = [
-        .Shake,
-        .Pop,
-        .Morph,
-        .Squeeze,
-        .Wobble,
-        .Swing,
-        .FlipX,
-        .FlipY,
-        //.Fall,
-//        .SqueezeLeft,
-//        .SqueezeRight,
-//        .SqueezeDown,
-//        .SqueezeUp,
-//        .SlideLeft,
-//        .SlideRight,
-//        .SlideDown,
-//        .SlideUp,
-       // .FadeIn,
-//        .FadeOut,
-//        .FadeInLeft,
-//        .FadeInRight,
-//        .FadeInDown,
-//        .FadeInUp,
-//        .ZoomIn,
-//        .ZoomOut,
-//        .Flash
-    ]
+    let data = DataManager.shared
     
-    let animationCurves: [Spring.AnimationCurve] = [
-        .EaseIn,
-        .EaseOut,
-        .EaseInOut,
-        .Linear,
-        .Spring,
-        .EaseInSine,
-        .EaseOutSine,
-        .EaseInOutSine,
-      //  .EaseInQuad,
-//        .EaseOutQuad,
-//        .EaseInOutQuad,
-//        .EaseInCubic,
-//        .EaseOutCubic,
-//        .EaseInOutCubic,
-//        .EaseInQuart,
-//        .EaseOutQuart,
-//        .EaseInOutQuart,
-//        .EaseInQuint,
-//        .EaseOutQuint,
-//        .EaseInOutQuint,
-//        .EaseInExpo,
-//        .EaseOutExpo,
-//        .EaseInOutExpo,
-//        .EaseInCirc,
-//        .EaseOutCirc,
-//        .EaseInOutCirc,
-//        .EaseInBack,
-//        .EaseOutBack,
-//        .EaseInOutBack
-    ]
- 
-    for index in 0..<animationPresets.count {
+    data.animationPresets.shuffle()
+    data.animationCurves.shuffle()
+    
+    for index in 0..<data.animationPresets.count {
         
-        let animationType = Animation(preset: animationPresets[index].rawValue,
-                                      curve: animationCurves[index].rawValue,
+        let animationType = Animation(preset: data.animationPresets[index].rawValue,
+                                      curve: data.animationCurves[index].rawValue,
                                       force: CGFloat.random(in: 1..<5),
                                       duration: CGFloat.random(in: 1..<5))
         

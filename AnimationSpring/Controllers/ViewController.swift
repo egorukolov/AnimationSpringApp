@@ -21,21 +21,12 @@ class ViewController: UIViewController {
     var springAnimationCases = Animation.getAnimationType()
     
     private var count = 0
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    
-    }
 
     @IBAction func startSpringAnimationButton(_ sender: SpringButton) {
         
-        
-        
-        springAnimationCases.shuffle()
-        
         let animationType = springAnimationCases[count]
         
+        sender.setTitle(springAnimationCases[count + 1].preset, for: .normal)
         
         springAnimationView.animation = animationType.preset
         springAnimationView.curve = animationType.curve
@@ -47,19 +38,11 @@ class ViewController: UIViewController {
         thirdLabel.text = "Force: \(animationType.force)"
         
         springAnimationView.animate()
-        
-        
-        
-        sender.titleLabel?.text = springAnimationCases[count + 1].curve
-        sender.animate()
-        
-        count += 1
-        
-        if count >= springAnimationCases.count {
-            
-            count = 0
+      
+        if springAnimationView.animation.count > count {
+           count += 1
+        } else {
+            count -= springAnimationView.animation.count
         }
-        
-        
     }
 }
