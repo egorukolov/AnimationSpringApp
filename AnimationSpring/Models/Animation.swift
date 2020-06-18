@@ -30,7 +30,7 @@ extension Animation {
             
             let animationType = Animation(preset: data.animationPresets[index].rawValue,
                                           curve: data.animationCurves[index].rawValue,
-                                          force: CGFloat.random(format: "%.2f", in: 1..<5),
+                                          force: CGFloat.random(in: 1..<5),
                                           duration: CGFloat.random(in: 1..<5))
             
             springAnimations.append(animationType)
